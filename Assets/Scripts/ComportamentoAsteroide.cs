@@ -26,6 +26,8 @@ public class ComportamentoAsteroide : MonoBehaviour
     void OnTriggerEnter2D(Collider2D outro) {
         // destrói o objeto do contexto
         Destroy(gameObject);
+        // destrói o projétil quando acerta o alvo
+        Destroy(outro.gameObject);
     }
 
 }
