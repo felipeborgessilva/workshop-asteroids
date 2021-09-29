@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8695504068838049984}
   - component: {fileID: 8695504068838049985}
   - component: {fileID: 8695504068838049986}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Asteriode
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -21,4 +21,11 @@ public class ComportamentoAsteroide : MonoBehaviour
     {
         
     }
+
+    // atualiza na colisão do objeto
+    void OnTriggerEnter2D(Collider2D outro) {
+        // destrói o objeto do contexto
+        Destroy(gameObject);
+    }
+
 }
