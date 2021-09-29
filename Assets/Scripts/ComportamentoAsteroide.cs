@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class ComportamentoAsteroide : MonoBehaviour
 {
+    public static System.Action EventoAsteroideDestruido = null;
     public Rigidbody2D meuRigidbody;
+    public ComportamentoAsteroide prefabAsteroidMenor;
     public float velocidadeMaxima = 2.0f;
+    public int quantidadeFragmentos = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +31,21 @@ public class ComportamentoAsteroide : MonoBehaviour
         Destroy(gameObject);
         // destrói o projétil quando acerta o alvo
         Destroy(outro.gameObject);
+        
+        for (int i = 0; i < quantidadeFragmentos; i++)
+        {
+            Instantiate(
+                prefabAsteroidMenor, 
+                meuRigidbody.position, 
+                Quaternion.identity
+            );
+        }
+
+        if (EventoAsteroideDestruido != null)
+        {
+            EventoAsteroideDestruido();
+        }
+
     }
 
 }

@@ -11,9 +11,13 @@ public class ComportamentoJogador : MonoBehaviour
     public Animator animator;
     public Rigidbody2D prefabProjetil;
     public float velocidadeProjetil = 10.0f;
+    public AudioSource soundFx;
 
     void  Start() {
+        // coleta a animação do objeto 
         animator = GetComponent<Animator>();
+        // coleta o som do objeto
+        soundFx = GetComponent<AudioSource>();
     }
 
     void Update() {
@@ -25,7 +29,10 @@ public class ComportamentoJogador : MonoBehaviour
                 meuRigidbody.position, 
                 Quaternion.identity
             );
+            // aplica a velocidade ao projétil
             projetil.velocity = transform.up * velocidadeProjetil;
+            // da play no som de tiro da nave do jogador
+            soundFx.Play();
         }    
     }
 

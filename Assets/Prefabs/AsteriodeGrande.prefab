@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8695504068838049985}
   - component: {fileID: 8695504068838049986}
   m_Layer: 8
-  m_Name: Asteriode
+  m_Name: AsteriodeGrande
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,7 +119,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meuRigidbody: {fileID: 8695504068838049984}
+  prefabAsteroidMenor: {fileID: 8695504068838049985, guid: ba22bd0ae67e4d74aac777bf38079fef, type: 3}
   velocidadeMaxima: 2
+  quantidadeFragmentos: 3
 --- !u!58 &8695504068838049986
 CircleCollider2D:
   m_ObjectHideFlags: 0
