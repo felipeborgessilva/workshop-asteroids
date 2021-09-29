@@ -7,36 +7,48 @@ public class ComportamentoJogador : MonoBehaviour
     public Rigidbody2D meuRigidbody;
     public float aceleracao = 1.0f;
     public float velocidadeAngular = 180.0f;
+    public float velocidadeMaxima = 10.0f;
 
-    // Start is called before the first frame update
-    void Start()
+    // Update is called once per frame - Estudar sobre FixedUpdate - Usado para movimentação de personagem
+    void FixedUpdate()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // se a tecla W for apertada
-        if (Input.GetKey(KeyCode.W))
+        // se a tecla seta pra cima for apertada
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             Vector3 direcao = transform.up * aceleracao;
             // cria a força para impulsionar a nave
             meuRigidbody.AddForce(direcao, ForceMode2D.Force);
         }
 
-        // se tecla A for apertada
-        if (Input.GetKey(KeyCode.A))
+        // se tecla seta pra esquerda for apertada
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             // rotaciona o objeto sentido antihorário
             meuRigidbody.rotation += velocidadeAngular * Time.deltaTime; 
         }
 
-        // se tecla D for apertada
-        if (Input.GetKey(KeyCode.D))
+        // se tecla seta pra direita for apertada
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             // rotaciona o objeto no sentido horário
             meuRigidbody.rotation -= velocidadeAngular * Time.deltaTime; 
         }
+
+        // verifica se a velocidade é maior que a máxima
+        if (meuRigidbody.velocity.magnitude > velocidadeMaxima)
+        {
+            // atribui o valor máximo de velocidade ao objeto
+            meuRigidbody.velocity = Vector2.ClampMagnitude(
+                meuRigidbody.velocity,
+                velocidadeMaxima
+            );
+        }
     }
+
+    // atualiza na colisão do objeto
+    void OnTriggerEnter2D(Collider2D outro) {
+        // destrói o objeto do contexto
+        Destroy(gameObject);
+    }
+
 }
