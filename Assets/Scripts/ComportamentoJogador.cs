@@ -13,7 +13,7 @@ public class ComportamentoJogador : MonoBehaviour
     public float velocidadeProjetil = 10.0f;
 
     void  Start() {
-        // animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     void Update() {
@@ -38,9 +38,11 @@ public class ComportamentoJogador : MonoBehaviour
             Vector3 direcao = transform.up * aceleracao;
             // cria a força para impulsionar a nave
             meuRigidbody.AddForce(direcao, ForceMode2D.Force);
-            // animator.SetBool("taCorrendo", true);
+            // seta verdadeiro para o jogador correndo
+            animator.SetBool("taCorrendo", true);
         } else {
-            // animator.SetBool("taCorrendo", false);
+            // seta falso para o jogador correndo
+            animator.SetBool("taCorrendo", false);
         }
 
         // se tecla seta pra esquerda for apertada
