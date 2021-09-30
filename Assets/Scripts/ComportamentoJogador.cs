@@ -5,13 +5,14 @@ using UnityEngine;
 public class ComportamentoJogador : MonoBehaviour
 {
     public Rigidbody2D meuRigidbody;
+    public Animator animator;
+    public Rigidbody2D prefabProjetil;
+    public AudioSource soundFx;
     public float aceleracao = 1.0f;
     public float velocidadeAngular = 180.0f;
     public float velocidadeMaxima = 10.0f;
-    public Animator animator;
-    public Rigidbody2D prefabProjetil;
     public float velocidadeProjetil = 10.0f;
-    public AudioSource soundFx;
+    public float duracaoProjetilEmSegundos = 1.0f;
 
     void  Start() {
         // coleta a animação do objeto 
@@ -33,6 +34,8 @@ public class ComportamentoJogador : MonoBehaviour
             projetil.velocity = transform.up * velocidadeProjetil;
             // da play no som de tiro da nave do jogador
             soundFx.Play();
+
+            Destroy(projetil.gameObject, duracaoProjetilEmSegundos);
         }    
     }
 

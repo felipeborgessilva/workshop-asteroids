@@ -7,6 +7,8 @@ public class ComportamentoAsteroide : MonoBehaviour
     public static System.Action EventoAsteroideDestruido = null;
     public Rigidbody2D meuRigidbody;
     public ComportamentoAsteroide prefabAsteroidMenor;
+    public EfeitoAsteroideDestruido prefabEfeitos;
+
     public float velocidadeMaxima = 2.0f;
     public int quantidadeFragmentos = 3;
 
@@ -22,16 +24,12 @@ public class ComportamentoAsteroide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     // atualiza na colisão do objeto
     void OnTriggerEnter2D(Collider2D outro) {
-        // destrói o objeto do contexto
-        Destroy(gameObject);
-        // destrói o projétil quando acerta o alvo
-        Destroy(outro.gameObject);
-        
+
         for (int i = 0; i < quantidadeFragmentos; i++)
         {
             Instantiate(
@@ -45,6 +43,18 @@ public class ComportamentoAsteroide : MonoBehaviour
         {
             EventoAsteroideDestruido();
         }
+
+        // instancia o efeito sonoro de destruição do asteróide 
+        Instantiate(
+            prefabEfeitos,
+            meuRigidbody.position, 
+            Quaternion.identity
+        );
+
+        // destrói o objeto do contexto
+        Destroy(gameObject);
+        // destrói o projétil quando acerta o alvo
+        Destroy(outro.gameObject);
 
     }
 

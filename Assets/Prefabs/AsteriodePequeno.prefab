@@ -121,7 +121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meuRigidbody: {fileID: 8695504068838049984}
   prefabAsteroidMenor: {fileID: 0}
-  velocidadeMaxima: 2
+  prefabEfeitos: {fileID: 1883646329111356523, guid: 25722cb87e567f74e952d35cd84df2eb, type: 3}
+  velocidadeMaxima: 3
   quantidadeFragmentos: 0
 --- !u!58 &8695504068838049986
 CircleCollider2D:
