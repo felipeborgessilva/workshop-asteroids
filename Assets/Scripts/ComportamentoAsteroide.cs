@@ -24,7 +24,8 @@ public class ComportamentoAsteroide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        // rotaciona o objeto no sentido horário
+        meuRigidbody.rotation -= 1.0f * Time.deltaTime; 
     }
 
     // atualiza na colisão do objeto

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+ using UnityEngine.SceneManagement;
 
 public class ComportamentoJogador : MonoBehaviour
 {
@@ -84,6 +85,7 @@ public class ComportamentoJogador : MonoBehaviour
     void OnTriggerEnter2D(Collider2D outro) {
         // destrói o objeto do contexto
         Destroy(gameObject);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }

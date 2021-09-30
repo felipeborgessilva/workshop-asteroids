@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8695504068838049997}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -122,7 +122,7 @@ MonoBehaviour:
   meuRigidbody: {fileID: 8695504068838049984}
   prefabAsteroidMenor: {fileID: 0}
   prefabEfeitos: {fileID: 1883646329111356523, guid: 25722cb87e567f74e952d35cd84df2eb, type: 3}
-  velocidadeMaxima: 3
+  velocidadeMaxima: 2
   quantidadeFragmentos: 0
 --- !u!58 &8695504068838049986
 CircleCollider2D:
