@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8695504068838049984}
   - component: {fileID: 8695504068838049985}
   - component: {fileID: 8695504068838049986}
+  - component: {fileID: -4492281748233250826}
   m_Layer: 8
   m_Name: AsteriodePequeno
   m_TagString: Untagged
@@ -138,3 +139,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.24
+--- !u!114 &-4492281748233250826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8695504068838049997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf08d9667459b5d4b8ccf4ee78d6e3b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meuRigidbody: {fileID: 8695504068838049984}

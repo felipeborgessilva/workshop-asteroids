@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoPontuacao: {fileID: 1417856487}
+  pontuacao: 0
 --- !u!1 &1417856485
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +453,7 @@ GameObject:
   - component: {fileID: 1810051229}
   - component: {fileID: 1810051230}
   - component: {fileID: 1810051231}
+  - component: {fileID: 1810051232}
   m_Layer: 6
   m_Name: Jogador
   m_TagString: Untagged
@@ -519,7 +521,7 @@ Transform:
   m_GameObject: {fileID: 1810051224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.17, y: -0.93, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -696,6 +698,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1810051232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810051224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf08d9667459b5d4b8ccf4ee78d6e3b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meuRigidbody: {fileID: 1810051228}
 --- !u!1 &2140116111
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,6 +724,7 @@ GameObject:
   - component: {fileID: 2140116112}
   - component: {fileID: 2140116116}
   - component: {fileID: 2140116115}
+  - component: {fileID: 2140116117}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -751,7 +767,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.17
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -851,6 +867,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2140116117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140116111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac83eb26c188e646a19b1dc03bab28a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minhaCamera: {fileID: 2140116113}
 --- !u!1 &2145338668
 GameObject:
   m_ObjectHideFlags: 0
