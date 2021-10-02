@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class OndaDeAsteroide : MonoBehaviour
 {
+    // cria  variável do comportamento do asteroid
     public ComportamentoAsteroide prefabAsteroide;
+    // cria a variável que informa a quantidade de asteroides para criar por onda
     public int quantosAsteroides = 3;
 
     // Start is called before the first frame update
