@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EfeitoAsteroideDestruido : MonoBehaviour
+public class EfeitoTiroDisparado : MonoBehaviour
 {
-    public ParticleSystem meuParticleSystem;
+    // coleta o áudio do objeto
     public AudioSource meuAudioSource;
+    // cria variável para o delay da destruição do efeito
     public float delayAutoDestruir = 1.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        meuParticleSystem.Play(false);
-        // executa o som
+        // inicia o som
         meuAudioSource.Play();
-        // executa a destruição do próprio objeto de som
+        // destrói o obejto com delay
         Destroy(gameObject, delayAutoDestruir);
     }
+
 }
