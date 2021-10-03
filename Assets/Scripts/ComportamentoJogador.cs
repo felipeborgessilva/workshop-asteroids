@@ -8,11 +8,14 @@ public class ComportamentoJogador : MonoBehaviour
     public Rigidbody2D meuRigidbody;
     public Animator animator;
     public Rigidbody2D prefabProjetil;
+    public Transform gameOver;
     public float aceleracao = 1.0f;
     public float velocidadeAngular = 180.0f;
     public float velocidadeMaxima = 10.0f;
     public float velocidadeProjetil = 10.0f;
     public float duracaoProjetilEmSegundos = 1.0f;
+
+    public AudioSource meuAudioSource;
 
     void  Start() {
         // coleta a animação do objeto 
@@ -38,6 +41,19 @@ public class ComportamentoJogador : MonoBehaviour
     // Update is called once per frame - Estudar sobre FixedUpdate - Usado para movimentação de personagem
     void FixedUpdate()
     {
+        // quando o botão de andar foi apertado
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            meuAudioSource.loop = true;
+            // toca o som da nave
+            meuAudioSource.Play();
+        }
+        // quando o botão de andar for solto
+        if (Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            // para o som da nave
+            meuAudioSource.Stop();
+        }
         // se a tecla seta pra cima for apertada
         if (Input.GetKey(KeyCode.UpArrow))
         {
@@ -80,7 +96,8 @@ public class ComportamentoJogador : MonoBehaviour
     void OnTriggerEnter2D(Collider2D outro) {
         // destrói o objeto do contexto
         Destroy(gameObject);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        gameOver.gameObject.SetActive(true);
     }
 
 }
