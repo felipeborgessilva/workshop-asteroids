@@ -453,6 +453,7 @@ GameObject:
   - component: {fileID: 1810051229}
   - component: {fileID: 1810051230}
   - component: {fileID: 1810051232}
+  - component: {fileID: 1810051231}
   m_Layer: 6
   m_Name: Jogador
   m_TagString: Untagged
@@ -532,7 +533,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810051224}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -540,7 +541,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.6302455
 --- !u!50 &1810051228
 Rigidbody2D:
   serializedVersion: 4
@@ -601,6 +602,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &1810051231
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810051224}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5, y: 1.5}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.24, y: 1.15}
+  m_EdgeRadius: 0
 --- !u!114 &1810051232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -705,8 +732,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946605407}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0825, y: -0.013, z: 0}
-  m_LocalScale: {x: 11.254663, y: 6.43564, z: 1}
+  m_LocalPosition: {x: 0.0515, y: 0.0579, z: 0}
+  m_LocalScale: {x: 11.164111, y: 6.5962296, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
