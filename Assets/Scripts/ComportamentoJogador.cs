@@ -35,25 +35,12 @@ public class ComportamentoJogador : MonoBehaviour
             projetil.velocity = transform.up * velocidadeProjetil;
             // destrói o projétil de acordo com o tempo setado no painel
             Destroy(projetil.gameObject, duracaoProjetilEmSegundos);
-        }    
+        }
     }
 
     // Update is called once per frame - Estudar sobre FixedUpdate - Usado para movimentação de personagem
     void FixedUpdate()
     {
-        // quando o botão de andar foi apertado
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            meuAudioSource.loop = true;
-            // toca o som da nave
-            meuAudioSource.Play();
-        }
-        // quando o botão de andar for solto
-        if (Input.GetKeyUp(KeyCode.UpArrow))
-        {
-            // para o som da nave
-            meuAudioSource.Stop();
-        }
         // se a tecla seta pra cima for apertada
         if (Input.GetKey(KeyCode.UpArrow))
         {
@@ -66,7 +53,7 @@ public class ComportamentoJogador : MonoBehaviour
             // seta falso para o jogador correndo
             animator.SetBool("taCorrendo", false);
         }
-
+        
         // se tecla seta pra esquerda for apertada
         if (Input.GetKey(KeyCode.LeftArrow))
         {
